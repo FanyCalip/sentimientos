@@ -1,3 +1,4 @@
+
 <!-- Custom Styles -->
     <style>
         /* Estilos generales */
@@ -16,15 +17,18 @@
             right: 0;
             background-color: #333;
             color: white;
-            padding: 10px;
+            padding: 20px 0;
             z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 30px;
             font-size: 18px;
+            padding: 5px;
+            font-weight: bold;
         }
 
         nav a:hover {
@@ -43,34 +47,41 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding-top: 100px; /* Espacio extra para que no se tape el contenido */
         }
 
         #hero h1 {
-            font-size: 4rem;
+            font-size: 5rem;
             font-weight: bold;
+            margin-bottom: 20px;
         }
 
         #hero p {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: lighter;
+            margin-bottom: 30px;
         }
 
         /* Sección de contenido principal */
         section {
             padding: 80px 20px;
+            margin-top: 80px; /* Para compensar el espacio de la barra de navegación */
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 40px;
             color: #333;
+            font-weight: bold;
         }
 
         .content {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             text-align: center;
+            line-height: 1.6;
+            font-size: 1.2rem;
         }
 
         /* Estilo de las imágenes */
@@ -78,15 +89,23 @@
             width: 100%;
             height: auto;
             margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
+        /* Pie de página */
         footer {
             text-align: center;
             padding: 40px 20px;
             background-color: #333;
             color: white;
+            margin-top: 60px;
         }
 
         footer p {
             margin: 0;
+            font-size: 1rem;
         }
+    </style>
+
+      
