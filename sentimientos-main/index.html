@@ -1,156 +1,123 @@
 <!DOCTYPE html>
-
 <html lang="es">
-    <head>
-         <meta charset="UTF -8"> 
-         <title> Fany Calip</title>
-         <meta name="viweport" content="width=device-width, initial-scale=1.0">
-         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-         <!--link href="style.css" rel="stylesheet" type="text/css" -->
-    </head>
-    <body>
-        <!--Encabezado y Barra de Navegación-->
-           <header class="sticky-top bg-dark text-white py-3">
-                <div class="container d-flex justify-content-between align-items-center">
-                    <h1 class="mb-0">Fany Calip</h1>
-                    <nav>
-                        <ul class="list-unstyled d-flex mb-0">
-                            <li class="ms-3"><a href="#home" class="text-white text-decoration-none">Inicio</a></li>
-                        <li class="ms-3"><a href="#biography" class="text-white text-decoration-none">Biografía</a></li>
-                        <li class="ms-3"><a href="#work" class="text-white text-decoration-none">Obra y Proyectos</a></li>
-                        <li class="ms-3"><a href="#research" class="text-white text-decoration-none">Investigación</a></li>
-                        <li class="ms-3"><a href="#contact" class="text-white text-decoration-none">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fany Calip</title>
 
-<!-- Sección Principal con Video de Fondo -->
-<section id="inicio" class="hero position-relative">
-    <video autoplay muted loop id="background-video" class="w-100" style="height: 100vh; object-fit: cover;">
-        <source src="video.mp4" type="video/mp4">
-    </video>
-    <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
-        <h1>Fany Calip</h1>
-        <p>Artista multidisciplinaria explorando la relación entre humanos, plantas y el arte</p>
-    </div>
-</section>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Biografía -->
-<section id="Bio/CV" class="py-5 bg-light">
-    <div class="container">
-        <h2>Bio/CV</h2>
-        <p>Estefani Arana Fonseca, nacida en el Estado de México en el año 2002, es una artista multidisciplinaria que desde una edad temprana ha demostrado un profundo interés por la intersección entre la tecnología, ciencia, creatividad y el arte. Nacida en una familia de pocos artistas y creativos, Estefani ha cultivado su amor por el arte y la innovación, fusionando sus habilidades artísticas con gran interés por las nuevas tecnologías.
- 
-            Su práctica artística se centra en explorar todas las posibilidades infinitas de la tecnología para crear mundos visuales, creativos, únicos, fantasiosos y envolventes.Su trabajo se basa en la experiencia personal cotidiana, la identidad y el medio ambiente.Además, incorpora su interés por los temas científicos, fusionando elementos surrealistas con ficción.Sus obras responden a una serie de inquietudes y preocupaciones propias sobre la relación entre la naturaleza y el ser humano, relaciones interpersonales y la experimentación científica, invitando a reflexionar sobre la intersección entre la ciencia, la tecnología y el arte.
-             
-             </p>
+    <!-- Custom Styles -->
+    <style>
+        /* Estilo general */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-        <p> Estefani es una persona muy arriesgada a la experimentación y a lo imposible, está constantemente buscando nuevas formas de expresión artística. Utiliza herramientas como software de diseño gráfico, audio, modelado 3D, fotografía, edición de video y visuales para sus proyectos.
- 
-            Recientemente, ha dirigido su enfoque hacia el bioarte, una forma de arte que combina la biología, la tecnología y la creatividad para explorar temas relacionados con la vida, la naturaleza y la identidad.A través del bioarte, Estefani está explorando obras que inspiran reflexión y diálogo sobre los avances tecnológicos y su impacto en nuestra percepción del mundo natural y artificial.
-            </p>
-         <p>A lo largo de su carrera, Estefani ha participado en diversos proyectos de arte digital, incluyendo instalaciones, performances y exposiciones, destacando entre ellos.
+        /* Encabezado con imagen de fondo */
+        #hero {
+            position: relative;
+            height: 100vh;
+            background-image: url('hero-image.jpg'); /* Cambia por tu propia imagen */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+        }
+        
+        /* Texto en el centro del video */
+        #hero .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-            “Nosotros somos calavera” (2022) en Lerma de Villada, México, colaborando en un videomapping.
-            
-             “El color de los sentimientos” (2023): Instalación presentada en la sala de usos múltiples de la Universidad Autónoma Metropolitana que exploró el tema de la carencia afectiva en jóvenes adultos. 
-            
-            “Raíces” (2023)  en El Rule Comunidad de Saberes, Ciudad de México, una exposicón fotografica sobre la conexión con la naturaleza.
-            Videomapping en los 15 años de la UAM Lerma (2024).
-            
-            “El collage y el poder de la imagen” (2024) en el Centro Cultural Xavier Villaurrutia, Ciudad de Mexico.
-            
-            “Boceto” (2024), performance en colaboración con Hugo Solis
-            
-             Ademas, Estefani fue parte del staff del Domoarte Festival (2024), contribuyendo en la organización y contenido visual del evento.
-             </p>
+        #hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
 
-             <p>En su tiempo libre, Estefani disfruta investigando, conociendo, explorando y compartiendo en foros, conferencias, talleres y  eventos de arte y tecnología, alimentando su curiosidad por saber cada vez más y encontrar inspiración para la creación de sus obras.
+        /* Estilo de las secciones */
+        section {
+            padding: 50px 0;
+        }
 
-             </p>
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
 
-    </div>
-</section>
+        /* Galería de imágenes */
+        .gallery img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
 
- <!-- Obra y Proyectos -->
- <section id="Obras" class="py-5">
-    <div class="container">
-        <h2>Obras</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="obra1.jpg" alt="Obra 1" class="img-fluid rounded mb-3">
-                <p>Descripción de la obra o proyecto.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="obra2.jpg" alt="Obra 2" class="img-fluid rounded mb-3">
-                <p>Descripción de la obra o proyecto.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="obra3.jpg" alt="Obra 3" class="img-fluid rounded mb-3">
-                <p>Descripción de la obra o proyecto.</p>
+        .gallery .col-md-4 {
+            padding: 0 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sección Principal -->
+    <section id="hero">
+        <div class="content">
+            <h1>Fany Calip</h1>
+            <p>Artista multidisciplinaria</p>
+        </div>
+    </section>
+
+    <!-- Sección Bio/CV -->
+    <section id="bio-cv">
+        <div class="container">
+            <h2 class="section-title">Bio/CV</h2>
+            <p>Soy Fany Calip, una artista visual con un enfoque en la conexión entre humanos y plantas. Mi trabajo explora cómo nuestras acciones y emociones afectan la vida vegetal, llevando al espectador a reflexionar sobre la relación entre los seres humanos y su entorno natural.</p>
+        </div>
+    </section>
+
+    <!-- Sección Obras -->
+    <section id="works">
+        <div class="container">
+            <h2 class="section-title">Obras</h2>
+            <div class="row gallery">
+                <div class="col-md-4">
+                    <img src="obra1.jpg" alt="Obra 1">
+                </div>
+                <div class="col-md-4">
+                    <img src="obra2.jpg" alt="Obra 2">
+                </div>
+                <div class="col-md-4">
+                    <img src="obra3.jpg" alt="Obra 3">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Investigación y Tesis -->
-<section id="Exposiciones" class="py-5 bg-light">
-    <div class="container">
-        <h2>Exposiciones</h2>
-        <p>Mi investigación aborda cómo los estados mentales de los seres humanos influyen en el bienestar de las plantas, explorando la conexión entre la psicología humana y la fisiología vegetal. A través de mis proyectos artísticos, busco transmitir cómo nuestras emociones y acciones impactan el entorno natural, en especial las plantas que sustentan la vida en el planeta.</p>
-    </div>
-</section>
+    <!-- Sección Investigación -->
+    <section id="research">
+        <div class="container">
+            <h2 class="section-title">Investigación</h2>
+            <p>Mi investigación aborda la relación entre el estado emocional de los humanos y la salud de las plantas. A través de mis proyectos artísticos, trato de invitar a los espectadores a reflexionar sobre el impacto que nuestras acciones tienen sobre el mundo natural.</p>
+        </div>
+    </section>
 
-<!-- Sección de Contacto -->
-<section id="contact" class="py-5">
-    <div class="container">
-        <h2>Contacto</h2>
-        <p>Si deseas más información o quieres colaborar en mis proyectos, no dudes en contactarme:</p>
-        <p>Email: <a href="mailto:fanycalip@example.com">fanycalip@example.com</a></p>
-    </div>
-</section>
+    <!-- Pie de Página -->
+    <footer>
+        <div class="container text-center py-3">
+            <p>&copy; 2024 Fany Calip. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-<!-- Pie de Página -->
-<footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Fany Calip. Todos los derechos reservados.</p>
-</footer>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
-
-
-
-        
-
-       ><h2>Ficha tecnica</h2>
-
-       <p> Autor: Estefani Arana Fonseca</p>
-       <p> Tecnica: Instalación/performance</p>
-       <p> Año: 2023</p>
-       <p> Lugar: Lerma</p>
-
-       <img src="imagenes/img.png" class="mx-auto d-block col-sm-3 "  width=20%> 
-       <img src="imagenes/im.png"  class="mx-auto d-block col-sm-3" width=20% >
-
-       <h3>Biografia</h3>
-
-       <p> Estefani Arana Fonseca es una apasionada artista digital. Nacida en una familia de pocos artistas y creativos, Estefani desarrollo su pasión por el arte desde una edad temprana. Fascinada por la intersección entre la tecnología, creatividad y el arte, decidió combinar sus habilidades artísticas junto con la informática y las nuevas tecnologías.</p>
-
-       <p> Actualmente está completando su licenciatura en Arte y Comunicaciones Digitales en la Universidad Autónoma Metropolitana de México. Pesar de aun estar en porceso de finalizar su educación, Estefani se ha sumergido en el mundo del arte digital con un enfoque claro y una determinación inquebrantable. Su enfoque artístico se centra en explorar todas las posibilidades infinitas de la tecnología para crear mundos visuales, creativos, únicos, fantasiosos y envolventes. Sus obras incorporan elementos surrealistas con un poco de ficción que desafían la percepción de lo convencional.</p>
-
-       <p>Estefani es una persona muy arriesgada a la experimentación y a lo imposible que para ella nada es imposible y está constantemente buscando nuevas formas de expresión artística. Sus herramientas incluyen software de diseño gráfico, audio, modelado 3D, fotografía, edición de video y visuales. </p>
-
-       <p> Ha participado en algunos proyectos en el mundo del arte digital. Su instalación/performance “El color de los sentimientos” se exhibió en la sala de usos múltiples de la Universidad Autónoma Metropolitana y exploro el tema de la carencia afectiva en jóvenes adultos. También participo en el videomapping llamado “Nosotros somos calavera” en Lerma de Villada, México.</p>
-
-       <p>En su tiempo libre, Estefani disfruta investigando, conociendo, explorando y compartiendo en foros, conferencias, eventos de arte y tecnología. </p>
-
-
-
-
-
-    
-    </body>
-</html>
